@@ -5,6 +5,11 @@
 		Solicitar Diária
 	</title>
 
+	<?php
+		include_once "tela_de_login.php";
+
+	?>
+
 	<style type="text/css">
 		fieldset{
 			width: 50%;
@@ -20,7 +25,9 @@
 			<legend><h3>Dados Pessoais</h3></legend>
 			
 			<label>Nome:</label>
-  			<input type="text" name="nNome" size="50">
+  			<?php
+  				echo $_SESSION['nNome'];
+  			?>
 
   			<br>
   			<br>

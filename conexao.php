@@ -1,9 +1,8 @@
 <?php
-	$hotsname = "localhost";
+	$hostname = "localhost";
 	$user = "root";
 	$password = "";
-	$database "DIARIA";
+	$database = "DIARIA";
 
 	$conexao = mysqli_connect($hostname, $user, $password, $database);
-
 ?>
