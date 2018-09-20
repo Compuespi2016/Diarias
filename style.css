@@ -1,0 +1,14 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	bottom: 21px;
+}
+header#cabecalho{
+	padding: 20px;
+	background: grey;
+}
+
+nav{
+	text-align: right;
+}
