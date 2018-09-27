@@ -6,7 +6,7 @@
 	</title>
 
 	<?php
-		include_once "tela_de_login.php";
+		include_once "cabecalho.php";
 
 	?>
 
@@ -20,53 +20,60 @@
 <body>
 	<center>
 	<h1>Solicitação</h1>
-	<form method="post" action="">
+	<form method="post" action="salva_solicitacao.php">
 		<fieldset>
 			<legend><h3>Dados Pessoais</h3></legend>
 			
 			<label>Nome:</label>
-  			<?php
-  				echo $_SESSION['nNome'];
-  			?>
+  			<?php echo $_SESSION['nNome']; ?>
 
   			<br>
   			<br>
   		
 			<label>Telefone: </label>
-  			<input type="text" name="nTelefone" size="25">
+  			<?php echo $_SESSION['nTelefone']; ?>
 
   			<br>
   			<br>
   		
   			<label>E-mail: </label>
-  			<input type="text" name="nEmail" size="30">
+  			<?php echo $_SESSION['nEmail']; ?>
 
   			<br>
   			<br>
   
   			<label>Centro: </label>	
-  			<input type="text" name="nCentro">
+  			<?php echo $_SESSION['nCentro']; ?>
 
   			<br>
   			<br>
   		
   			<label>Campus: </label>
-  			<input type="text" name="nCampus">
+  			<?php echo $_SESSION['nCampus']; ?>
 
   			<br>
   			<br>
   		
   			<label>Matrícula: </label>	
-  			<input type="text" name="nMatricula">
+  			<?php echo $_SESSION['nMatricula']; ?>
 
   			<br>
   			<br>
 
   			<label>Tipo: </label>
-  			<input type="radio" name="graduacao" value="Docente" checked> Docente &nbsp;&nbsp;&nbsp;
-  			<input type="radio" name="graduacao" value="Tecnico">Tecnico
-  			&nbsp;&nbsp;&nbsp;
-  			<input type="radio" name="graduacao" value="estudante">Estudante &nbsp;&nbsp;&nbsp;
+  			<?php
+  				if ($_SESSION['nTipo'] == 'D'){
+  					echo "Docente";
+  				}
+  				if ($_SESSION['nTipo'] == 'T'){
+  					echo "Tecnico";
+  				}
+  				if ($_SESSION['nTipo'] == 'E'){
+  					echo "Estudante";
+  				}
+
+  			?>
+  			
 		</fieldset>
 		
 		<br>
@@ -133,11 +140,11 @@
 		<fieldset>
 			<legend><h3>Informações sobre Auxilio</h3></legend>
 			<label>Recebeu Auxilio nos Anos Anteriores</label>
-			<input type="radio" name="RebeuAuxilioAnosAnteriores" value="SIM" checked>SIM &nbsp;&nbsp;&nbsp;
-  			<input type="radio" name="RebeuAuxilioAnosAnteriores" value="NÃO">NÃO
+			<input type="radio" name="RecebeuAuxilioAnosAnteriores" value="SIM" checked>SIM &nbsp;&nbsp;&nbsp;
+  			<input type="radio" name="RecebeuAuxilioAnosAnteriores" value="NÃO">NÃO
   			<br>
   			<br>
-  			<label>em caso afirmativo indique os anos: </label>&nbsp;
+  			<label>em caso afirmativo indique quantos anos: </label>&nbsp;
 			<input type="text" name="IndicativoAnos" size="10">
 
 			<br>

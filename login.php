@@ -4,11 +4,13 @@
 	<title>Login</title>
 
 	<?php
-		include_once "tela_de_login.php";
+		include_once "cabecalho.php";
 	?>
 
 	<style type="text/css">
 		form{
+			text-align: center;
+			justify-content: center;
 			padding-top: 50px;
 			padding-left: 300px; 
 			text-align: left;

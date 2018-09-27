@@ -4,7 +4,7 @@
 	<title>Index</title>
 
 	<?php
-		include_once "cabeçalho.php";
+		include_once "cabecalho.php";
 	?>
 
 </head>

@@ -8,19 +8,20 @@
 
 	$row = mysqli_num_rows($sql);
 	if($row > 0){
+		$array_bd = mysqli_fetch_array($sql);
+
 		session_start();
 		$_SESSION['nMatricula'] = $_POST['nMatricula'];
-		$_SESSION['nNome'] = mysqli_query($conexao, "select NOME from CADASTRADOS where MATRICULA = '$matricula'");
-		$_SESSION['nCampus'] = mysqli_query($conexao, "select CAMPUS from CADASTRADOS where MATRICULA = '$matricula'");
-		$_SESSION['nTelefone'] = mysqli_query($conexao, "select TELEFONE from CADASTRADOS where MATRICULA = '$matricula'");
-		$_SESSION['nEmail'] = mysqli_query($conexao, "select EMAIL from CADASTRADOS where MATRICULA = '$matricula'");
-		$_SESSION['nCentro'] = mysqli_query($conexao, "select CENTRO from CADASTRADOS where MATRICULA = '$matricula'");
-		$_SESSION['nTipo'] = mysqli_query($conexao, "select TIPO from CADASTRADOS where MATRICULA = '$matricula'");
+		$_SESSION['nNome'] = $array_bd["NOME"];
+		$_SESSION['nCampus'] = $array_bd["CAMPUS"];
+		$_SESSION['nTelefone'] = $array_bd["TELEFONE"];
+		$_SESSION['nEmail'] = $array_bd["EMAIL"];
+		$_SESSION['nCentro'] = $array_bd["CENTRO"];
+		$_SESSION['nTipo'] = $array_bd["TIPO"];
 		$_SESSION['nSenha'] = $_POST['nSenha'];
 	}
 
-	echo $_SESSION['nNome'];
-	#header("Location: Index.php");
+		header("Location: Index.php");
 
 	mysqli_close($conexao);
 ?>
