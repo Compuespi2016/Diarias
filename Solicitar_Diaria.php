@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Solicitar Diária
-	</title>
+	<title> Solicitar Diária </title>
+
+	<meta charset="utf-8">
 
 	<?php
 		include_once "cabecalho.php";
@@ -12,7 +12,7 @@
 
 	<style type="text/css">
 		fieldset{
-			width: 50%;
+			width: 60%;
 			text-align: left;
 		}
 	</style>
@@ -79,8 +79,8 @@
 		<br>
 		
 		<fieldset>
-			<legend><h3>Dados bancários</h3></legend>
-		
+			<legend><h3>Dados Bancários</h3></legend>
+			<!--
 			<label>Código do Banco: </label>
 			<input type="text" name="nCodigoDoBanco">
 
@@ -93,8 +93,36 @@
 			<br>
 			<br>
 
-			<label>Código da Agência: </label>
-			<input type="text" name="nCodigoDaAgencia"><br>
+			<label>Selecionar Banco:</label>
+			<select id="inputState" class="form-control">
+		      <option selected>Escolha Banco</option>
+		      <option>...</option>
+		    </select>
+			-->
+			<div class="form-group col-md-10">
+		      <label for="inputState">Selecionar Banco:</label>
+		      <select name="nBanco" id="inputState" class="form-control" required="">
+		      	<option selected> </option>
+		      	<?php
+		      		$sql_bancos = mysqli_query($conexao,"SELECT * FROM BANCO");
+		      		while($aux = mysqli_fetch_assoc($sql_bancos)){
+		      	?>
+		        		<option><?php echo $aux["COD_BANCO"]." - ".$aux["NOME_BANCO"]; ?></option>
+		    	<?php } ?>
+		      </select>
+		    </div>
+
+		    <div class="form-group col-md-10">
+			  <label>Código da Agência: </label> &nbsp;&nbsp;
+			  <input type="text" name="nCodigoDaAgencia" required="">
+			<div>
+
+			<br>	
+
+			<div class="form-group col-md-15">
+			  <label>Numero da Conta: </label> &nbsp;&nbsp;
+			  <input type="text" name="nNumConta" size="15" required="">
+			<div>
 		</fieldset>
 
 		<br>
@@ -103,22 +131,33 @@
 			<legend><h3>Dados do Evento</h3></legend>
 			
 			<label>Nome do Evento: </label>
-			<input type="text" name="nNomeDoEvento" size="39">
+			<input type="text" name="nNomeDoEvento" size="39" required="">
 
 			<br>
 			<br>
 		
-			<label>Local e Periodo do Evento: </label>
-			<input type="text" name="nLocalEPeriodoDoEvento" size="35">
+			<label>Local do Evento: </label>
+			<input type="text" name="nLocalDoEvento" size="35" required="">
 
 			<br>
 			<br>
 
-			<label>Abrangência do Evento: </label>
-			<br>
-			<input type="radio" name="abrangenciaDoEvento" value="Internacional" checked>Internacional &nbsp;
-  			<input type="radio" name="abrangenciaDoEvento" value="Nacional">Nacional &nbsp;
-  			<input type="radio" name="abrangenciaDoEvento" value="Regional">Regional
+			<label>Inicio do evento: </label> &nbsp;&nbsp;
+  			<input type="date" name="nInicioEvento" required="">
+
+  			<br>
+  			<br>
+
+  			<label>Fim do evento: </label> &nbsp;&nbsp;
+  			<input type="date" name="nFimEvento" required="">
+
+  			<br>
+  			<br>	
+
+			<label>Abrangência do Evento: </label> &nbsp;&nbsp;&nbsp;
+			<input type="radio" name="nAbrangenciaDoEvento" value="Internacional">Internacional &nbsp;
+  			<input type="radio" name="nAbrangenciaDoEvento" value="Nacional">Nacional &nbsp;
+  			<input type="radio" name="nAbrangenciaDoEvento" value="Regional">Regional
 		</fieldset>
 
 		<br>
@@ -126,46 +165,49 @@
 		<fieldset>
 			<legend><h3>Dados do Trabalho</h3></legend>
 			<label>Titulo do Trabalho: </label>
-			<input type="text" name="TituloDoTrabalho" size="35">
+			<input type="text" name="TituloDoTrabalho" size="35" required="">
 
 			<br>
 			<br>
 
 			<label>Titulo do Projeto cadastrado na PROP: </label>
-			<input type="text" name="TituloDoProjetoCadastradoNaProp" size="65"><br>
+			<input type="text" name="TituloDoProjetoCadastradoNaProp" size="65" required=""><br>
 		</fieldset>
 
 		<br>
 
-		<fieldset>
-			<legend><h3>Informações sobre Auxilio</h3></legend>
-			<label>Recebeu Auxilio nos Anos Anteriores</label>
-			<input type="radio" name="RecebeuAuxilioAnosAnteriores" value="SIM" checked>SIM &nbsp;&nbsp;&nbsp;
-  			<input type="radio" name="RecebeuAuxilioAnosAnteriores" value="NÃO">NÃO
-  			<br>
-  			<br>
-  			<label>em caso afirmativo indique quantos anos: </label>&nbsp;
-			<input type="text" name="IndicativoAnos" size="10">
+		<fieldset>		
 
-			<br>
-			<br>
-		
-
-			<label>Auxilio Solicitado</label>
-			<input type="radio" name="AuxilioSolicitado" value="Passagem" checked>Passagem &nbsp;&nbsp;&nbsp;
+			<label>Auxilio Solicitado: </label>
+			<?php
+				if($_SESSION['nTipo'] == "D" || $_SESSION['nTipo'] == "T"){
+			?>
+			<input type="radio" name="AuxilioSolicitado" value="Passagem">Passagem &nbsp;&nbsp;&nbsp;
   			<input type="radio" name="AuxilioSolicitado" value="Diaria">Diaria &nbsp;&nbsp;&nbsp;
+  			<?php
+  				}else{
+  			?>
   			<input type="radio" name="AuxilioSolicitado" value="AjudaFinanceira"> Ajuda Financeira
-  			
+  			<?php
+  				}
+  			?>
   			<br>
   			<br>
   			
+  			<!--
   			<label>Descrição: </label>
   			<br>
   			<textarea name="Descricao" rows="10" cols="60"></textarea><br>
+  			-->
+  			<div class="form-group col-md-10">
+			  <label for="exampleFormControlTextarea1">Descrição do Projeto: </label>
+			  <textarea class="form-control" name="nDesc" id="exampleFormControlTextarea1" rows="5"></textarea>
+			</div>
 		</fieldset>
 
 		<br>
-		<input type="submit" style="width: 100px; height: 40px">
+		<input type="submit">
+		<!-- <input class="btn btn-primary" type="submit" value="Enviar"> -->
 		<br>
 
 	</form>
