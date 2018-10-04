@@ -7,29 +7,32 @@
 		include_once "cabecalho.php";
 	?>
 
-	<style type="text/css">
-		form{
-			text-align: center;
-			justify-content: center;
-			padding-top: 50px;
-			padding-left: 300px; 
-			text-align: left;
-		}
-
-		div{
-			
-		}
-	</style>
 </head>
 <body>
-	<form method="post" action="conecta_usuario.php">
-		Matricula:<br>
-		<input type="text" name="nMatricula"><br><br>
-		
-		Senha:<br>
-		<input type="password" name="nSenha"><br><br>
-		
-		<input type="submit" value="Entrar">
-	</form>
+	<center>
+
+		<h1>Login</h1>
+
+		<form method="post" action="conecta_usuario.php" style="width: 20%;text-align: left; padding-top: 30px;">
+
+			<div>
+				<label>Matricula: </label>
+				<br>
+				<input type="text" name="nMatricula" required="">
+
+				<br>
+				<br>
+
+				<label>Senha: </label>
+				<br>
+				<input type="password" name="nSenha" required="">
+				
+				<br>
+				<br>
+
+				<input class="btn btn-primary" type="submit" value="Entrar">
+			</div>
+		</form>
+	</center>
 </body>
 </html>
