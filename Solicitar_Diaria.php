@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<title> Solicitar Diária </title>
 
@@ -20,88 +20,64 @@
 <body>
 	<center>
 	<h1>Solicitação</h1>
-	<form method="post" action="salva_solicitacao.php">
+	<form method="post" action="salva_solicitacao.php" style="width: 110%;">
 		<fieldset>
 			<legend><h3>Dados Pessoais</h3></legend>
 			
-			<label>Nome:</label>
-  			<?php echo $_SESSION['nNome']; ?>
-
-  			<br>
-  			<br>
-  		
-			<label>Telefone: </label>
-  			<?php echo $_SESSION['nTelefone']; ?>
-
-  			<br>
-  			<br>
-  		
-  			<label>E-mail: </label>
-  			<?php echo $_SESSION['nEmail']; ?>
-
-  			<br>
-  			<br>
-  
-  			<label>Centro: </label>	
-  			<?php echo $_SESSION['nCentro']; ?>
-
-  			<br>
-  			<br>
-  		
-  			<label>Campus: </label>
-  			<?php echo $_SESSION['nCampus']; ?>
-
-  			<br>
-  			<br>
-  		
-  			<label>Matrícula: </label>	
-  			<?php echo $_SESSION['nMatricula']; ?>
-
-  			<br>
-  			<br>
-
-  			<label>Tipo: </label>
-  			<?php
-  				if ($_SESSION['nTipo'] == 'D'){
-  					echo "Docente";
-  				}
-  				if ($_SESSION['nTipo'] == 'T'){
-  					echo "Tecnico";
-  				}
-  				if ($_SESSION['nTipo'] == 'E'){
-  					echo "Estudante";
-  				}
-
-  			?>
+			<div class="form-group col-md-10">
+				<label>Nome:</label>
+	  			<?php echo $_SESSION['nNome']; ?>
+	  		</div>
   			
+  			<div class="form-group col-md-10">
+				<label>Telefone: </label>
+  				<?php echo $_SESSION['nTelefone']; ?>
+  			</div>
+  			
+  			<div class="form-group col-md-10">
+  				<label>E-mail: </label>
+  				<?php echo $_SESSION['nEmail']; ?>
+  			</div>
+  			
+  			<div class="form-group col-md-10">
+  				<label>Centro: </label>	
+  				<?php echo $_SESSION['nCentro']; ?>
+			</div>
+
+  			<div class="form-group col-md-10">
+  				<label>Campus: </label>
+  				<?php echo $_SESSION['nCampus']; ?>
+			</div>
+  		
+  			<div class="form-group col-md-10">
+  				<label>Matrícula: </label>	
+  				<?php echo $_SESSION['nMatricula']; ?>
+			</div>
+			
+			<div class="form-group col-md-10">
+	  			<label>Tipo: </label>
+	  			<?php
+	  				if ($_SESSION['nTipo'] == 'D'){
+	  					echo "Docente";
+	  				}
+	  				if ($_SESSION['nTipo'] == 'T'){
+	  					echo "Tecnico";
+	  				}
+	  				if ($_SESSION['nTipo'] == 'E'){
+	  					echo "Estudante";
+	  				}
+
+	  			?>
+	  		</div>
 		</fieldset>
 		
 		<br>
 		
 		<fieldset>
 			<legend><h3>Dados Bancários</h3></legend>
-			<!--
-			<label>Código do Banco: </label>
-			<input type="text" name="nCodigoDoBanco">
-
-			<br>
-			<br>
-
-			<label>Nome do Banco: </label>
-			<input type="text" name="nNomeDoBanco" size="35">
-
-			<br>
-			<br>
-
-			<label>Selecionar Banco:</label>
-			<select id="inputState" class="form-control">
-		      <option selected>Escolha Banco</option>
-		      <option>...</option>
-		    </select>
-			-->
-			<div class="form-group col-md-10">
-		      <label for="inputState">Selecionar Banco:</label>
-		      <select name="nBanco" id="inputState" class="form-control" required="">
+			<div class="form-group row col-md-10">
+		      <label for="inputState" class="col-sm-5 col-form-label">Selecionar Banco:</label>
+		      <select name="nBanco" id="inputState" class="col-sm-7 form-control" required="">
 		      	<option selected> </option>
 		      	<?php
 		      		$sql_bancos = mysqli_query($conexao,"SELECT * FROM BANCO");
@@ -111,18 +87,16 @@
 		    	<?php } ?>
 		      </select>
 		    </div>
-
-		    <div class="form-group col-md-10">
-			  <label>Código da Agência: </label> &nbsp;&nbsp;
-			  <input type="text" name="nCodigoDaAgencia" required="">
-			<div>
-
-			<br>	
-
-			<div class="form-group col-md-15">
-			  <label>Numero da Conta: </label> &nbsp;&nbsp;
-			  <input type="text" name="nNumConta" size="15" required="">
-			<div>
+			
+			<div class="form-group row col-md-10">
+			    <label for="inputCodigoAgencia" class="col-sm-5 col-form-label">Código da Agência: </label>
+			    <input type="text" name="nCodigoDaAgencia" class="col-sm-7 form-control" id="inputCodigoAgencia" placeholder="Ex: 0001-3" required="">
+			</div>
+			
+			<div class="form-group row col-md-10">
+			    <label for="inputNumConta" class="col-sm-5 col-form-label">Número da Conta: </label>
+			    <input type="text" name="nNumConta" class="col-sm-7 form-control" id="inputNumConta" placeholder="Ex: 0000012" required="">
+			</div>
 		</fieldset>
 
 		<br>
@@ -130,84 +104,108 @@
 		<fieldset>
 			<legend><h3>Dados do Evento</h3></legend>
 			
-			<label>Nome do Evento: </label>
-			<input type="text" name="nNomeDoEvento" size="39" required="">
+			<div class="form-group row col-md-10">
+			    <label for="inputNomeEvento" class="col-sm-5 col-form-label">Nome do Evento: </label>
+			    <input type="text" name="nNomeDoEvento" class="col-sm-7 form-control" id="inputNomeEvento" placeholder="Ex: ENUCOMP" required="">
+			</div>
 
-			<br>
-			<br>
-		
-			<label>Local do Evento: </label>
-			<input type="text" name="nLocalDoEvento" size="35" required="">
+			<div class="form-group row col-md-10">
+			    <label for="inputLocalEvento" class="col-sm-5 col-form-label">Local do Evento: </label>
+			    <input type="text" name="nLocalDoEvento" class="col-sm-7 form-control" id="inputLocalEvento" placeholder="Ex: Ufpi - parnaíba" required="">
+			</div>
 
-			<br>
-			<br>
+  			<div class="form-group row col-md-10">
+			    <label for="inputDataInicioEvento" class="col-sm-5 col-form-label">Data de Início: </label>
+			    <input type="date" name="nInicioEvento" class="col-sm-7 form-control" id="inputDataInicioEvento" required="">
+			</div>
 
-			<label>Inicio do evento: </label> &nbsp;&nbsp;
-  			<input type="date" name="nInicioEvento" required="">
-
-  			<br>
-  			<br>
-
-  			<label>Fim do evento: </label> &nbsp;&nbsp;
-  			<input type="date" name="nFimEvento" required="">
-
-  			<br>
-  			<br>	
-
-			<label>Abrangência do Evento: </label> &nbsp;&nbsp;&nbsp;
-			<input type="radio" name="nAbrangenciaDoEvento" value="Internacional">Internacional &nbsp;
-  			<input type="radio" name="nAbrangenciaDoEvento" value="Nacional">Nacional &nbsp;
-  			<input type="radio" name="nAbrangenciaDoEvento" value="Regional">Regional
+  			<div class="form-group row col-md-10">
+			    <label for="inputDataFimEvento" class="col-sm-5 col-form-label">Data de Fim: </label>
+			    <input type="date" name="nFimEvento" class="col-sm-7 form-control" id="inputDataFimEvento" required="">
+			</div>	
+			
+			<div class="form-group row col-md-10">
+			    <label for="inputAbrangenciaDoEvento" class="col-sm-4 col-form-label">Abrangência do evento: </label>
+			    <div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Internacional">
+				  <label class="form-check-label" for="inputAbrangenciaDoEvento">Internacional</label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Nacional">
+				  <label class="form-check-label" for="inputAbrangenciaDoEvento">Nacional</label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Regional">
+				  <label class="form-check-label" for="inputAbrangenciaDoEvento">Regional</label>
+				</div>
+			</div>
 		</fieldset>
 
 		<br>
 
 		<fieldset>
 			<legend><h3>Dados do Trabalho</h3></legend>
-			<label>Titulo do Trabalho: </label>
-			<input type="text" name="TituloDoTrabalho" size="35" required="">
+			<div class="form-group row col-md-10">
+			    <label for="inputTituloDoTrabalho" class="col-sm-5 col-form-label">Titulo do Trabalho: </label>
+			    <input type="text" name="TituloDoTrabalho" class="col-sm-7 form-control" id="inputTituloDoTrabalho" required="">
+			</div>
 
-			<br>
-			<br>
-
+			<!--
 			<label>Titulo do Projeto cadastrado na PROP: </label>
 			<input type="text" name="TituloDoProjetoCadastradoNaProp" size="65" required=""><br>
+			-->
+
+			<div class="form-group row col-md-10">
+			    <label for="inputTituloDoTrabalhoCadastradoProp" class="col-sm-5 col-form-label">Titulo do Projeto cadastrado na PROP: </label>
+			    <input type="text" name="TituloDoProjetoCadastradoNaProp" class="col-sm-7 form-control" id="inputTituloDoTrabalhoCadastradoProp" required="">
+			</div>
+
 		</fieldset>
 
-		<br>
-
 		<fieldset>		
+			
+			<div class="form-group row col-md-10">
+				<!--
+				<label>Auxilio Solicitado: </label>
+				-->
+				<label for="inputAuxilioSolicitado" class="col-sm-4 col-form-label">Auxilio Solicitado: </label>
 
-			<label>Auxilio Solicitado: </label>
-			<?php
-				if($_SESSION['nTipo'] == "D" || $_SESSION['nTipo'] == "T"){
-			?>
-			<input type="radio" name="AuxilioSolicitado" value="Passagem">Passagem &nbsp;&nbsp;&nbsp;
-  			<input type="radio" name="AuxilioSolicitado" value="Diaria">Diaria &nbsp;&nbsp;&nbsp;
-  			<?php
-  				}else{
-  			?>
-  			<input type="radio" name="AuxilioSolicitado" value="AjudaFinanceira"> Ajuda Financeira
-  			<?php
-  				}
-  			?>
-  			<br>
-  			<br>
+				<?php
+					if($_SESSION['nTipo'] == "D" || $_SESSION['nTipo'] == "T"){
+				?>
+				
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="Passagem">
+				  <label class="form-check-label" for="inputAuxilioSolicitado">Passagem</label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="Diaria">
+				  <label class="form-check-label" for="inputAuxilioSolicitado">Diaria</label>
+				</div>
+
+	  			<?php
+	  				}else{
+	  			?>
+				
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="AjudaFinanceira">
+				  <label class="form-check-label" for="inputAuxilioSolicitado">Ajuda Financeira</label>
+				</div>
+
+	  			<?php
+	  				}
+	  			?>
+	  		</div>
   			
-  			<!--
-  			<label>Descrição: </label>
-  			<br>
-  			<textarea name="Descricao" rows="10" cols="60"></textarea><br>
-  			-->
   			<div class="form-group col-md-10">
 			  <label for="exampleFormControlTextarea1">Descrição do Projeto: </label>
 			  <textarea class="form-control" name="nDesc" id="exampleFormControlTextarea1" rows="5"></textarea>
 			</div>
+		
 		</fieldset>
 
 		<br>
-		<input type="submit">
-		<!-- <input class="btn btn-primary" type="submit" value="Enviar"> -->
+		<input class="btn btn-primary" type="submit" value="Enviar Solicitação">
 		<br>
 
 	</form>

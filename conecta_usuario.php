@@ -19,9 +19,11 @@
 		$_SESSION['nCentro'] = $array_bd["CENTRO"];
 		$_SESSION['nTipo'] = $array_bd["TIPO"];
 		$_SESSION['nSenha'] = $_POST['nSenha'];
-	}
 
-		header("Location: Index.php");
+		header("Location: Index.php?sucesso=true");
+	}else{
+		header("Location: login.php?erro=true");
+	}
 
 	mysqli_close($conexao);
 ?>

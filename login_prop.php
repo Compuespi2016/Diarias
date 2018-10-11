@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Login PROP</title>
 
 	<?php
 		$erro = (isset($_GET['erro'])) ? $_GET['erro'] : null;
@@ -12,9 +12,9 @@
 <body>
 	<center>
 
-		<h1>Login</h1>
+		<h1>Login PROP</h1>
 
-		<form method="post" action="conecta_usuario.php" style="width: 30%;text-align: left; padding-top: 30px;">
+		<form method="post" action="conecta_prop.php" style="width: 30%;text-align: left; padding-top: 30px;">
 
 			<?php
 				if($erro == true){
@@ -30,9 +30,9 @@
 			?>
 
 			<div>
-				<label>Matricula: </label>
+				<label>Usuário: </label>
 				<br>
-				<input type="text" name="nMatricula" required="">
+				<input type="text" name="nUsuario" required="">
 
 				<br>
 				<br>

@@ -22,7 +22,7 @@
 </head>
 <body>
 	<?php
-		if (!isset($_SESSION['nMatricula'])) {
+		if (!isset($_SESSION['nUsuario'])) {
 	?>
 		<header id="cabecalho">
 			<center>
@@ -31,7 +31,7 @@
 				  <nav class="nav">
 					<a class="nav-link" href="Index.php"><b>Inicio</b></a>
 					<a class="nav-link" href="login.php"><b>Login</b></a>
-					<a class="nav-link" href="login_prop.php"><b>Login PROP</b></a>
+					<a class="nav-link" href="login_prop.php"><b>PROP</b></a>
 				  </nav>
 				</nav>
 			</center>
@@ -47,9 +47,7 @@
 				<nav class="navbar navbar-light bg-light shadow-sm p-3 mb-5 bg-light rounded">
 				  <a class="navbar-brand"><img src="_imagens/logo-1.png"/></a>
 				  <nav class="nav">
-					<a class="nav-link" href="Index.php">Inicio</a>
-					<a class="nav-link" href="Solicitar_Diaria.php">Solicitar Diária</a>
-					<a class="nav-link" href="lista_diarias.php">Minhas Diárias</a>
+					<a class="nav-link" href="index_prop.php">Inicio</a>
 					<a class="nav-link" href="sair.php">Sair</a>
 				  </nav>
 				</nav>

@@ -5,6 +5,9 @@
 
 	<?php
 		include_once "cabecalho.php";
+
+		$sucesso = (isset($_GET['sucesso'])) ? $_GET['sucesso'] : null;
+		$certo = (isset($_GET['deu_certo'])) ? $_GET['deu_certo'] : null;
 	?>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -32,12 +35,33 @@
 	?>
 
 			<center>
+
+				<?php
+					if($sucesso == true){
+				?>
+
 				<div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 350px">
 				  <strong>Usuário Logado com Sucesso</strong>
 				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				    <span aria-hidden="true">&times;</span>
 				  </button>
 				</div>
+
+				<?php } ?>
+
+				<?php
+					if($certo == true){
+				?>
+
+				<div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 350px">
+				  <strong>Solicitação Feita com Sucesso</strong>
+				  <strong>Aguarde a Confirmação</strong>
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+
+				<?php } ?>
 				<br>
 				<br>
 				<h1>Bem-vindo</h1>
