@@ -11,12 +11,7 @@
 	<style type="text/css">
 		
 		.list-group{
-			background: rgb(255, 255, 255);
-		}
-
-		.list-group :hover{
-			cursor: pointer;
-			background: #a8a8a8;
+			background: #000000;
 		}
 
 	</style>
@@ -27,25 +22,24 @@
 		<?php 
 			
 			include_once("conexao.php");
-			$sql_diarias = mysqli_query($conexao, "select * from SOLICITACAO order by COD_SOLICITACAO desc");
-
+			$mat = $_SESSION['nMatricula'];
+			$sql_diarias = mysqli_query($conexao, "select * from SOLICITACAO where MAT_SOLICITANTE = $mat order by COD_SOLICITACAO desc");
 			while($aux = mysqli_fetch_assoc($sql_diarias)){
 		?>
 		<br>
 			<?php
 				$loc = "diaria.php?cod_solicitacao = ".$aux["COD_SOLICITACAO"];
 			?>
-		<ul class="list-group" onclick="window.location.href = '<?php echo $loc ?>'">
-		  <li class="list-group-item list-group-item-secondary">
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item">
 			<div class="row">
-		    <div class="col-md-4"><?php echo $aux["NOME_EVENTO"];?></div>
-		    <div class="col-md-4"><?php echo $aux["ABRANGENCIA"];?></div>
-		    <div class="col-md-4"><?php echo $aux["TITULO_TRABALHO"];?></div>
-		    <div class="col-md-4"><?php echo $aux["TITULO_PROJETO"];?></div>
-		    <div class="col-md-4"><?php echo $aux["LOCAL_EVENTO"];?></div>
-		    <div class="col-md-4"><?php echo $aux["INICIO_EVENTO"];?></div>
-		    <div class="col-md-4"><?php echo $aux["FIM_EVENTO"];?></div>
-		    <div class="col-md-4"><?php echo $aux["VALIDACAO"];?></div>
+		    <div class="col-md-6"><?php echo "Evento: ".$aux["NOME_EVENTO"];?></div>
+		    <div class="col-md-6"><?php echo "Titulo do Trabalho: ".$aux["TITULO_TRABALHO"];?></div>
+		    <div class="col-md-6"><?php echo "Titulo do Projeto: ".$aux["TITULO_PROJETO"];?></div>
+		    <div class="col-md-6"><?php echo "Local: ".$aux["LOCAL_EVENTO"];?></div>
+		    <div class="col-md-6"><?php echo "Inicio dia: ".date('d/m/Y', strtotime($aux["INICIO_EVENTO"]));;?></div>
+		    <div class="col-md-6"><?php echo "Término dia: ".date('d/m/Y', strtotime($aux["FIM_EVENTO"]));?></div>
+		    <div class="col-md-6"><?php echo "Status: ".$aux["VALIDACAO"];?></div>
 
 		  	</div>
 		  </li>
@@ -54,8 +48,6 @@
 
 	    <?php
 			}
-			
-			
 		?>
 	</div>
 
