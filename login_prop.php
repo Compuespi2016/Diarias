@@ -29,23 +29,15 @@
 				}
 			?>
 
-			<div>
-				<label>Usuário: </label>
-				<br>
-				<input type="text" name="nUsuario" required="">
-
-				<br>
-				<br>
-
-				<label>Senha: </label>
-				<br>
-				<input type="password" name="nSenha" required="">
-				
-				<br>
-				<br>
-
-				<input class="btn btn-primary" type="submit" value="Entrar">
+			<div class="form-group">
+				<label for="exampleInputMatricula1">Matricula</label>
+			    <input type="text" name="nUsuario" class="form-control" id="exampleInputMatricula1" placeholder="Ex: teste" required="">
 			</div>
+			<div class="form-group">
+			    <label for="exampleInputSenha1">Senha</label>
+			    <input type="password" name="nSenha" class="form-control" id="exampleInputSenha1" required="">
+			</div>
+			<button type="submit" class="btn btn-primary">Acessar</button>
 		</form>
 	</center>
 </body>

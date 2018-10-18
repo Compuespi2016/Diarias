@@ -48,6 +48,7 @@
 				  <a class="navbar-brand"><img src="_imagens/logo-1.png"/></a>
 				  <nav class="nav">
 					<a class="nav-link" href="index_prop.php">Inicio</a>
+					<a class="nav-link" href="lista_solicitacoes.php">Solicitações</a>
 					<a class="nav-link" href="sair.php">Sair</a>
 				  </nav>
 				</nav>

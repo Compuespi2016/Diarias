@@ -1,0 +1,24 @@
+@charset utf-8;
+
+form#dados_login {
+	width: 20%;
+	text-align: left;
+	padding-top: 10px;
+}
+
+h1#titulo_principal {
+	letter-spacing: -3px;
+	color: #2268B2;
+}
+
+a {
+	color: #2268B2;
+	font-size: large;
+}
+
+fieldset {
+	width: 60%;
+	text-align: left;
+}
+
+
