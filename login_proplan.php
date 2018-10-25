@@ -5,16 +5,16 @@
 
 	<?php
 		$erro = (isset($_GET['erro'])) ? $_GET['erro'] : null;
-		include_once "cabecalho.php";
+		include_once "cabecalho_proplan.php";
 	?>
 
 </head>
 <body>
 	<center>
 
-		<h1 id="titulo_principal">Login PROP</h1>
+		<h1 id="titulo_principal">Login PROPLAN</h1>
 
-		<form method="post" action="conecta_prop.php">
+		<form method="post" action="conecta_proplan.php">
 			<br>
 			<div id="dados_login" class="border rounded bg-light">
 				<?php

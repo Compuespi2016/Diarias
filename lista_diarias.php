@@ -6,18 +6,11 @@
 	<?php
 		include_once "cabecalho.php";
 	?>
-	<link href="grid.css" rel="stylesheet">
-
-	<style type="text/css">
-		
-		.list-group{
-			background: #000000;
-		}
-
-	</style>
+	
 </head>
 <body>
-
+	<center>
+	<h1 id="titulo_principal">Suas Solicitações</h1>
 	<div class="container">
 		<?php 
 			
@@ -30,17 +23,31 @@
 			<?php
 				$loc = "diaria.php?cod_solicitacao = ".$aux["COD_SOLICITACAO"];
 			?>
-		<ul class="list-group">
-		  <li class="list-group-item list-group-item">
+		<ul class="list-group" style="text-align: left;">
+		  <li class="list-group-item bg-light border rounded">
+			<h4><?php echo "Solicitação #".$aux["COD_SOLICITACAO"];?></h4>
 			<div class="row">
-		    <div class="col-md-6"><?php echo "Evento: ".$aux["NOME_EVENTO"];?></div>
-		    <div class="col-md-6"><?php echo "Titulo do Trabalho: ".$aux["TITULO_TRABALHO"];?></div>
-		    <div class="col-md-6"><?php echo "Titulo do Projeto: ".$aux["TITULO_PROJETO"];?></div>
-		    <div class="col-md-6"><?php echo "Local: ".$aux["LOCAL_EVENTO"];?></div>
-		    <div class="col-md-6"><?php echo "Inicio dia: ".date('d/m/Y', strtotime($aux["INICIO_EVENTO"]));;?></div>
-		    <div class="col-md-6"><?php echo "Término dia: ".date('d/m/Y', strtotime($aux["FIM_EVENTO"]));?></div>
-		    <div class="col-md-6"><?php echo "Status: ".$aux["VALIDACAO"];?></div>
-
+			    <div class="col-md-6">
+			    	<?php echo "Evento: ".$aux["NOME_EVENTO"];?>
+			    </div>
+			    <div class="col-md-6">
+			    	<?php echo "Titulo do Trabalho: ".$aux["TITULO_TRABALHO"];?>
+			    </div>
+			    <div class="col-md-6">
+			    	<?php echo "Titulo do Projeto: ".$aux["TITULO_PROJETO"];?>
+			    </div>
+			    <div class="col-md-6">
+			    	<?php echo "Local: ".$aux["LOCAL_EVENTO"];?>
+			   	</div>
+			    <div class="col-md-6">
+			    	<?php echo "Inicio dia: ".date('d/m/Y', strtotime($aux["INICIO_EVENTO"]));;?>
+			    </div>
+			    <div class="col-md-6">
+			    	<?php echo "Término dia: ".date('d/m/Y', strtotime($aux["FIM_EVENTO"]));?>
+			    </div>
+			    <div class="col-md-6">
+			    	<?php echo "Status: ".$aux["VALIDACAO"];?>
+			    </div>
 		  	</div>
 		  </li>
 
@@ -50,7 +57,7 @@
 			}
 		?>
 	</div>
-
+	</center>
 
 </body>
 </html>

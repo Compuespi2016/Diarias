@@ -44,5 +44,25 @@
 	</div>
 	
 	<br>
+
+	<div class="row d-flex justify-content-center">
+	  <div class="col-sm-3" onclick="location.href='login_prad.php'">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">PRAD</h5>
+	        <p class="card-text">Pró Reitoria de Administração e Recursos Humanos</p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-3" onclick="location.href='login_proplan.php'">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">PROPLAN</h5>
+	        <p class="card-text">A Pró Reitoria de Planejamento e Orçamento</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 </body>
 </html>

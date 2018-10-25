@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title> Solicitar Diária </title>
+	<title>Solicitar Diária</title>
 
 	<meta charset="utf-8">
 
 	<?php
 		include_once "cabecalho.php";
-
 	?>
 
-	<style type="text/css">
-		fieldset{
-			width: 60%;
-			text-align: left;
-		}
-	</style>
 </head>
 <body>
 	<center>
-	<h1>Solicitação</h1>
-	<form method="post" action="salva_solicitacao.php" style="width: 110%;">
-		<fieldset>
-			<legend><h3>Dados Pessoais</h3></legend>
-			
+	<h1 id="titulo_principal">Solicitação</h1>
+	<br>
+	<form method="post" action="salva_solicitacao.php">
+		<h3 id="subtitulo_principal">Dados Pessoais</h3>
+		<fieldset id="dados_solicitacao" class="border bg-light rounded">
 			<div class="form-group col-md-10">
-				<label>Nome:</label>
+				<label class="col-sm-5 col-form-label">Nome:</label>
 	  			<?php echo $_SESSION['nNome']; ?>
 	  		</div>
   			
   			<div class="form-group col-md-10">
-				<label>Telefone: </label>
+				<label class="col-sm-5 col-form-label">Telefone: </label>
   				<?php echo $_SESSION['nTelefone']; ?>
   			</div>
   			
   			<div class="form-group col-md-10">
-  				<label>E-mail: </label>
+  				<label class="col-sm-5 col-form-label">E-mail: </label>
   				<?php echo $_SESSION['nEmail']; ?>
   			</div>
   			
   			<div class="form-group col-md-10">
-  				<label>Centro: </label>	
+  				<label class="col-sm-5 col-form-label">Centro: </label>	
   				<?php echo $_SESSION['nCentro']; ?>
 			</div>
 
   			<div class="form-group col-md-10">
-  				<label>Campus: </label>
+  				<label class="col-sm-5 col-form-label">Campus: </label>
   				<?php echo $_SESSION['nCampus']; ?>
 			</div>
   		
   			<div class="form-group col-md-10">
-  				<label>Matrícula: </label>	
+  				<label class="col-sm-5 col-form-label">Matrícula: </label>	
   				<?php echo $_SESSION['nMatricula']; ?>
 			</div>
 			
 			<div class="form-group col-md-10">
-	  			<label>Tipo: </label>
+	  			<label class="col-sm-5 col-form-label">Tipo: </label>
 	  			<?php
 	  				if ($_SESSION['nTipo'] == 'D'){
 	  					echo "Docente";
@@ -66,16 +59,15 @@
 	  				if ($_SESSION['nTipo'] == 'E'){
 	  					echo "Estudante";
 	  				}
-
 	  			?>
 	  		</div>
 		</fieldset>
 		
 		<br>
 		
-		<fieldset>
-			<legend><h3>Dados Bancários</h3></legend>
-			<div class="form-group row col-md-10">
+		<h3>Dados Bancários</h3>
+		<fieldset id="dados_solicitacao" class="border bg-light rounded">
+			<div class="form-group row col-md-12">
 		      <label for="inputState" class="col-sm-5 col-form-label">Selecionar Banco:</label>
 		      <select name="nBanco" id="inputState" class="col-sm-7 form-control" required="">
 		      	<option selected> </option>
@@ -88,44 +80,42 @@
 		      </select>
 		    </div>
 			
-			<div class="form-group row col-md-10">
+			<div class="form-group row col-md-12">
 			    <label for="inputCodigoAgencia" class="col-sm-5 col-form-label">Código da Agência: </label>
 			    <input type="text" name="nCodigoDaAgencia" class="col-sm-7 form-control" id="inputCodigoAgencia" placeholder="Ex: 0001-3" required="">
 			</div>
 			
-			<div class="form-group row col-md-10">
+			<div class="form-group row col-md-12">
 			    <label for="inputNumConta" class="col-sm-5 col-form-label">Número da Conta: </label>
 			    <input type="text" name="nNumConta" class="col-sm-7 form-control" id="inputNumConta" placeholder="Ex: 0000012" required="">
 			</div>
 		</fieldset>
 
 		<br>
-
-		<fieldset>
-			<legend><h3>Dados do Evento</h3></legend>
-			
-			<div class="form-group row col-md-10">
+		<h3>Dados do Evento</h3>
+		<fieldset id="dados_solicitacao" class="border bg-light rounded">
+			<div class="form-group row col-md-12">
 			    <label for="inputNomeEvento" class="col-sm-5 col-form-label">Nome do Evento: </label>
 			    <input type="text" name="nNomeDoEvento" class="col-sm-7 form-control" id="inputNomeEvento" placeholder="Ex: ENUCOMP" required="">
 			</div>
 
-			<div class="form-group row col-md-10">
+			<div class="form-group row col-md-12">
 			    <label for="inputLocalEvento" class="col-sm-5 col-form-label">Local do Evento: </label>
 			    <input type="text" name="nLocalDoEvento" class="col-sm-7 form-control" id="inputLocalEvento" placeholder="Ex: Ufpi - parnaíba" required="">
 			</div>
 
-  			<div class="form-group row col-md-10">
+  			<div class="form-group row col-md-12">
 			    <label for="inputDataInicioEvento" class="col-sm-5 col-form-label">Data de Início: </label>
 			    <input type="date" name="nInicioEvento" class="col-sm-7 form-control" id="inputDataInicioEvento" required="">
 			</div>
 
-  			<div class="form-group row col-md-10">
+  			<div class="form-group row col-md-12">
 			    <label for="inputDataFimEvento" class="col-sm-5 col-form-label">Data de Fim: </label>
 			    <input type="date" name="nFimEvento" class="col-sm-7 form-control" id="inputDataFimEvento" required="">
 			</div>	
 			
-			<div class="form-group row col-md-10">
-			    <label for="inputAbrangenciaDoEvento" class="col-sm-4 col-form-label">Abrangência do evento: </label>
+			<div class="form-group row col-md-12">
+			    <label for="inputAbrangenciaDoEvento" class="col-sm-5 col-form-label">Abrangência do evento: </label>
 			    <div class="form-check form-check-inline">
 				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Internacional">
 				  <label class="form-check-label" for="inputAbrangenciaDoEvento">Internacional</label>
@@ -142,32 +132,23 @@
 		</fieldset>
 
 		<br>
-
-		<fieldset>
-			<legend><h3>Dados do Trabalho</h3></legend>
-			<div class="form-group row col-md-10">
+		<h3>Dados do Trabalho</h3>
+		<fieldset id="dados_solicitacao" class="border bg-light rounded">
+			<div class="form-group row col-md-12">
 			    <label for="inputTituloDoTrabalho" class="col-sm-5 col-form-label">Titulo do Trabalho: </label>
 			    <input type="text" name="TituloDoTrabalho" class="col-sm-7 form-control" id="inputTituloDoTrabalho" required="">
 			</div>
 
-			<!--
-			<label>Titulo do Projeto cadastrado na PROP: </label>
-			<input type="text" name="TituloDoProjetoCadastradoNaProp" size="65" required=""><br>
-			-->
-
-			<div class="form-group row col-md-10">
+			<div class="form-group row col-md-12">
 			    <label for="inputTituloDoTrabalhoCadastradoProp" class="col-sm-5 col-form-label">Titulo do Projeto cadastrado na PROP: </label>
 			    <input type="text" name="TituloDoProjetoCadastradoNaProp" class="col-sm-7 form-control" id="inputTituloDoTrabalhoCadastradoProp" required="">
 			</div>
-
 		</fieldset>
 
-		<fieldset>		
-			
+		<br>
+		<h3>Outras Informações</h3>
+		<fieldset id="dados_solicitacao" class="border bg-light rounded">		
 			<div class="form-group row col-md-10">
-				<!--
-				<label>Auxilio Solicitado: </label>
-				-->
 				<label for="inputAuxilioSolicitado" class="col-sm-4 col-form-label">Auxilio Solicitado: </label>
 
 				<?php
@@ -197,8 +178,8 @@
 	  			?>
 	  		</div>
   			
-  			<div class="form-group col-md-10">
-			  <label for="exampleFormControlTextarea1">Descrição do Projeto: </label>
+  			<div class="form-group col-md-12">
+			  <label for="exampleFormControlTextarea1">Descrição/Justificativa do Auxilio:</label>
 			  <textarea class="form-control" name="nDesc" id="exampleFormControlTextarea1" rows="5"></textarea>
 			</div>
 		
@@ -207,7 +188,7 @@
 		<br>
 		<input class="btn btn-primary" type="submit" value="Enviar Solicitação">
 		<br>
-
+		<br>
 	</form>
 	</center>
 </body>

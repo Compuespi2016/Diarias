@@ -4,7 +4,7 @@
 	<title>Index</title>
 
 	<?php
-		include_once "cabecalho_prop.php";
+		include_once "cabecalho_prad.php";
 
 		$sucesso = (isset($_GET['sucesso'])) ? $_GET['sucesso'] : null;
 		$certo = (isset($_GET['deu_certo'])) ? $_GET['deu_certo'] : null;
@@ -30,7 +30,7 @@
 
 		<?php } ?>
 
-		<h1 id="titulo_principal">PROP - PRÓ-REITORIA DE PESQUISA E PÓS GRADUAÇÃO</h1>
+		<h1 id="titulo_principal">PRAD - Pró Reitoria de Administração e Recursos Humanos</h1>
 		<br>
 	</center>
 </body>

@@ -40,7 +40,7 @@
 					if($sucesso == true){
 				?>
 
-				<div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 350px">
+				<div id="usuario_logado_sucesso" class="alert alert-success alert-dismissible fade show" role="alert">
 				  <strong>Usuário Logado com Sucesso</strong>
 				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				    <span aria-hidden="true">&times;</span>

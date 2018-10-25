@@ -44,8 +44,8 @@
 				<nav class="navbar navbar-light bg-light shadow-sm p-3 mb-5 bg-light rounded">
 				  <a class="navbar-brand"><img src="_imagens/logo-1.png"/></a>
 				  <nav class="nav">
-					<a class="nav-link" href="index_prop.php"><b>Inicio</b></a>
-					<a class="nav-link" href="lista_solicitacoes.php"><b>Solicitações</b></a>
+					<a class="nav-link" href="index_proplan.php"><b>Inicio</b></a>
+					<a class="nav-link" href="lista_solicitacoes_proplan.php"><b>Solicitações</b></a>
 					<a class="nav-link" href="sair.php"><b>Sair</b></a>
 				  </nav>
 				</nav>
