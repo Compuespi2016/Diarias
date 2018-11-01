@@ -45,8 +45,16 @@
 			    <div class="col-md-6">
 			    	<?php echo "Término dia: ".date('d/m/Y', strtotime($aux["FIM_EVENTO"]));?>
 			    </div>
+
 			    <div class="col-md-6">
-			    	<?php echo "Status: ".$aux["VALIDACAO"];?>
+			    	<?php if ($aux["VALIDACAO"] == "Confirmado") { ?>
+			    		<b><p class="text-success"><?php echo "Status: ".$aux["VALIDACAO"];?></p></b>
+			    	<?php }elseif ($aux["VALIDACAO"] == "Negado - PROP" || $aux["VALIDACAO"] == "Negado - PRAD" || $aux["VALIDACAO"] == "Negado - PROPLAN") { ?>
+			    		<b><p class="text-danger"><?php echo "Status: ".$aux["VALIDACAO"];?></p></b>
+			    		<?php echo "Justificativa: ".$aux["JUSTIFICATIVA"];?>
+			    	<?php }else { ?>
+			    		<b><p class="text-warning"><?php echo "Status: ".$aux["VALIDACAO"];?></p></b>
+			    	<?php } ?>
 			    </div>
 		  	</div>
 		  </li>

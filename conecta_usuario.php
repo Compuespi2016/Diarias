@@ -19,6 +19,7 @@
 		$_SESSION['nCentro'] = $array_bd["CENTRO"];
 		$_SESSION['nTipo'] = $array_bd["TIPO"];
 		$_SESSION['nSenha'] = $_POST['nSenha'];
+		$_SESSION['nQTD'] = $array_bd["QTD_SOLICITACAO_CONFIRMADA"];
 
 		header("Location: Index.php?sucesso=true");
 	}else{

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Lista de Solicitações</title>
+	<title>Lista de Solicitações PRAD</title>
 	<meta charset="utf-8">
 
 	<?php
-		include_once "cabecalho_prop.php";
+		include_once "cabecalho_prad.php";
 
 		$confirma = (isset($_GET['confirma'])) ? $_GET['confirma'] : null;
 		$nega = (isset($_GET['nega'])) ? $_GET['nega'] : null;
@@ -58,7 +58,7 @@
 	<br>
 
 	<?php
-		$sql_solicitacao = mysqli_query($conexao,"SELECT * FROM SOLICITACAO WHERE VALIDACAO = 'Em Avaliacao: PROP'" );
+		$sql_solicitacao = mysqli_query($conexao,"SELECT * FROM SOLICITACAO WHERE VALIDACAO = 'Em Avaliacao: PRAD'");
 		while($aux = mysqli_fetch_assoc($sql_solicitacao)){
 	?>
 			<div class="d-flex justify-content-center">
@@ -74,7 +74,7 @@
 							<?php echo $aux["TIPO_AUXILIO"]; ?>
 						</div>
 						<div class="col-md-1">
-							<a role="button" class="btn btn-primary" href="detalhe_solicitacao.php?id=<?php echo $aux['COD_SOLICITACAO']?>" >Verificar</a>
+							<a role="button" class="btn btn-primary" href="detalhe_solicitacao_prad.php?id=<?php echo $aux['COD_SOLICITACAO']?>" >Verificar</a>
 						</div>
 					</div>
 				</div>

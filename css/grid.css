@@ -2,11 +2,12 @@
 
 .col-sm-3 :hover {
 	cursor: pointer;
-	box-shadow: 5px 5px 2px gray;
+	box-shadow: 5px 5px 2px lightgray;
 	transition-duration: 0.5s; 
 }
 
 .card :hover {
 	box-shadow: none;
 }
+
 

@@ -1,24 +1,36 @@
 @charset utf-8;
 
-form#dados_login {
-	width: 20%;
-	text-align: left;
-	padding-top: 10px;
-}
-
 h1#titulo_principal {
 	letter-spacing: -3px;
 	color: #2268B2;
 }
 
-a {
+div#dados_login {
+	width: 40%;
+	text-align: left; 
+	padding: 10px; 
+	border-style: solid; 
+	border-color: black;
+}
+
+div#alerta_erro_login {
+	width: 350px;
+}
+
+b {
 	color: #2268B2;
 	font-size: large;
 }
 
-fieldset {
-	width: 60%;
+fieldset#dados_solicitacao {
+	width: 70%;
+	padding-top: 20px;
 	text-align: left;
 }
+
+div#usuario_logado_sucesso {
+	width: 350px;
+}
+
 
 

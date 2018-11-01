@@ -9,12 +9,38 @@
 		include_once "cabecalho.php";
 	?>
 
+	<script src="js/moment.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		function verifica_data() {
+			// body...
+			var data_inicio = document.getElementById('inputDataInicioEvento').value;
+			var data_fim = document.getElementById('inputDataFimEvento').value;
+
+			if (moment(data_inicio).isAfter(data_fim)) {
+				alert("Data de Inicio do Evento nao pode ser maior do que a Data de Fim do Evento :/");
+				return false;
+			} else {
+
+			}
+		}
+	</script>
+
 </head>
 <body>
 	<center>
 	<h1 id="titulo_principal">Solicitação</h1>
 	<br>
-	<form method="post" action="salva_solicitacao.php">
+
+	<?php
+		if($_SESSION['nQTD'] >= 1){
+			$local = "tabela_pontuacao.php";
+		}else {
+			$local = "salva_solicitacao.php";
+		}
+	?>
+
+	<form method="post" action= <?php echo $local; ?>>
 		<h3 id="subtitulo_principal">Dados Pessoais</h3>
 		<fieldset id="dados_solicitacao" class="border bg-light rounded">
 			<div class="form-group col-md-10">
@@ -117,15 +143,15 @@
 			<div class="form-group row col-md-12">
 			    <label for="inputAbrangenciaDoEvento" class="col-sm-5 col-form-label">Abrangência do evento: </label>
 			    <div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Internacional">
+				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Internacional" required="">
 				  <label class="form-check-label" for="inputAbrangenciaDoEvento">Internacional</label>
 				</div>
 				<div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Nacional">
+				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Nacional" required="">
 				  <label class="form-check-label" for="inputAbrangenciaDoEvento">Nacional</label>
 				</div>
 				<div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Regional">
+				  <input class="form-check-input" type="radio" name="nAbrangenciaDoEvento" id="inputAbrangenciaDoEvento" value="Regional" required="">
 				  <label class="form-check-label" for="inputAbrangenciaDoEvento">Regional</label>
 				</div>
 			</div>
@@ -156,11 +182,11 @@
 				?>
 				
 				<div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="Passagem">
+				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="Passagem" required="">
 				  <label class="form-check-label" for="inputAuxilioSolicitado">Passagem</label>
 				</div>
 				<div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="Diaria">
+				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="Diaria" required="">
 				  <label class="form-check-label" for="inputAuxilioSolicitado">Diaria</label>
 				</div>
 
@@ -169,7 +195,7 @@
 	  			?>
 				
 				<div class="form-check form-check-inline">
-				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="AjudaFinanceira">
+				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="AjudaFinanceira" required="">
 				  <label class="form-check-label" for="inputAuxilioSolicitado">Ajuda Financeira</label>
 				</div>
 
@@ -186,7 +212,7 @@
 		</fieldset>
 
 		<br>
-		<input class="btn btn-primary" type="submit" value="Enviar Solicitação">
+		<input class="btn btn-primary" type="submit" value="Enviar Solicitação" onclick="return verifica_data()">
 		<br>
 		<br>
 	</form>
