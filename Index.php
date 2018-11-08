@@ -24,7 +24,7 @@
 				<br>
 				<br>
 				<br>
-				<h1>solicitação de diarias</h1>
+				<h1>solicitação de diárias</h1>
 				<br>
 				<h4>clique em login para acessar</h4>
 			</center>
@@ -66,7 +66,7 @@
 				<br>
 				<h1>Bem-vindo</h1>
 				<br>
-				<h4>clique em solicitar diaria para fazer</h4>
+				<h4>clique em solicitar diária para fazer</h4>
 			</center>
 
 	<?php

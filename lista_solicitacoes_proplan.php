@@ -58,7 +58,7 @@
 	<br>
 
 	<?php
-		$sql_solicitacao = mysqli_query($conexao,"SELECT * FROM SOLICITACAO WHERE VALIDACAO = 'Em Avaliacao: PROPLAN'");
+		$sql_solicitacao = mysqli_query($conexao,"SELECT * FROM SOLICITACAO WHERE VALIDACAO = 'Em Avaliação: PROPLAN'");
 		while($aux = mysqli_fetch_assoc($sql_solicitacao)){
 	?>
 			<div class="d-flex justify-content-center">
