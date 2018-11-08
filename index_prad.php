@@ -30,7 +30,7 @@
 
 		<?php } ?>
 
-		<h1 id="titulo_principal">PRAD - Pró Reitoria de Administração e Recursos Humanos</h1>
+		<h1 id="titulo_principal">PRAD - Pró-Reitoria de Administração e Recursos Humanos</h1>
 		<br>
 	</center>
 </body>

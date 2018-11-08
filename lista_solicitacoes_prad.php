@@ -49,7 +49,7 @@
 					<b>Nome do Evento</b>
 				</div>
 				<div class="col-md-3">
-					<b>Tipo do Auxilio</b>
+					<b>Tipo do Auxílio</b>
 				</div>
 			</div>
 		</div>
@@ -68,10 +68,10 @@
 							<?php echo $aux["MAT_SOLICITANTE"]; ?>
 						</div>
 						<div class="col-md-3">
-							<?php echo $aux["NOME_EVENTO"]; ?>
+							<?php echo utf8_encode($aux["NOME_EVENTO"]); ?>
 						</div>
 						<div class="col-md-3">
-							<?php echo $aux["TIPO_AUXILIO"]; ?>
+							<?php echo utf8_encode($aux["TIPO_AUXILIO"]); ?>
 						</div>
 						<div class="col-md-1">
 							<a role="button" class="btn btn-primary" href="detalhe_solicitacao_prad.php?id=<?php echo $aux['COD_SOLICITACAO']?>" >Verificar</a>

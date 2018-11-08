@@ -21,7 +21,7 @@
 					if($erro == true){
 				?>
 					<div id="alerta_erro_login" class="alert alert-danger alert-dismissible fade show" role="alert">
-					  <strong>Matricula ou Senha Errada</strong>
+					  <strong>Matrícula ou Senha Errada</strong>
 					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					    <span aria-hidden="true">&times;</span>
 					  </button>

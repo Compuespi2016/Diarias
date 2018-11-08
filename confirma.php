@@ -9,7 +9,7 @@
 
 	$cod_sol = $_GET["id"];
 
-	mysqli_query($conexao,"UPDATE SOLICITACAO SET VALIDACAO = 'Em Avaliacao: PRAD' WHERE COD_SOLICITACAO = '$cod_sol'");
+	mysqli_query($conexao,"UPDATE SOLICITACAO SET VALIDACAO = 'Em Avaliação: PRAD' WHERE COD_SOLICITACAO = '$cod_sol'");
 
 	header("Location: lista_solicitacoes.php?confirma=true");
 

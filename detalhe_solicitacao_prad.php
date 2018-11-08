@@ -28,7 +28,7 @@
 		<fieldset id="dados_solicitacao" class="border bg-light rounded">
 			<div class="form-group col-md-10">
 				<label class="col-sm-5 col-form-label">Nome:</label>
-		  		<?php echo $sql_array_solicitante["NOME"]; ?>
+		  		<?php echo utf8_encode($sql_array_solicitante["NOME"]); ?>
 		  	</div>
 	  			
 	  		<div class="form-group col-md-10">
@@ -43,12 +43,12 @@
 	  			
 	  		<div class="form-group col-md-10">
 	  			<label class="col-sm-5 col-form-label">Centro: </label>	
-	  			<?php echo $sql_array_solicitante["CENTRO"]; ?>
+	  			<?php echo utf8_encode($sql_array_solicitante["CENTRO"]); ?>
 			</div>
 
 	  			<div class="form-group col-md-10">
 	  				<label class="col-sm-5 col-form-label">Campus: </label>
-	  				<?php echo $sql_array_solicitante["CAMPUS"]; ?>
+	  				<?php echo utf8_encode($sql_array_solicitante["CAMPUS"]); ?>
 				</div>
 	  		
 	  			<div class="form-group col-md-10">
@@ -63,7 +63,7 @@
 		  					echo "Docente";
 		  				}
 		  				if ($sql_array_solicitante["TIPO"] == 'T'){
-		  					echo "Tecnico";
+		  					echo "Técnico";
 		  				}
 		  				if ($sql_array_solicitante["TIPO"] == 'E'){
 		  					echo "Estudante";
@@ -77,7 +77,7 @@
 			<fieldset id="dados_solicitacao" class="border bg-light rounded">
 				<div class="form-group col-md-10">
 			      <label for="inputState" class="col-sm-5 col-form-label">Banco:</label>
-			      <?php echo $sql_array["COD_NOME_BANCO"] ?>
+			      <?php echo utf8_encode($sql_array["COD_NOME_BANCO"]) ?>
 			    </div>
 				
 				<div class="form-group col-md-10">
@@ -96,12 +96,12 @@
 			<fieldset id="dados_solicitacao" class="border bg-light rounded">
 				<div class="form-group col-md-10">
 				    <label for="inputNomeEvento" class="col-sm-5 col-form-label">Nome do Evento: </label>
-				    <?php echo $sql_array["NOME_EVENTO"] ?>
+				    <?php echo utf8_encode($sql_array["NOME_EVENTO"]) ?>
 				</div>
 
 				<div class="form-group col-md-10">
 				    <label for="inputLocalEvento" class="col-sm-5 col-form-label">Local do Evento: </label>
-				    <?php echo $sql_array["LOCAL_EVENTO"] ?>
+				    <?php echo utf8_encode($sql_array["LOCAL_EVENTO"]) ?>
 				</div>
 
 	  			<div class="form-group col-md-10">
@@ -116,7 +116,7 @@
 				
 				<div class="form-group col-md-10">
 				    <label for="inputAbrangenciaDoEvento" class="col-sm-5 col-form-label">Abrangência do evento: </label>
-				    <?php echo $sql_array["ABRANGENCIA"] ?>
+				    <?php echo utf8_encode($sql_array["ABRANGENCIA"]) ?>
 				</div>
 			</fieldset>
 			
@@ -124,13 +124,13 @@
 			<h3>Dados do Trabalho</h3>
 			<fieldset id="dados_solicitacao" class="border bg-light rounded">
 				<div class="form-group col-md-10">
-				    <label for="inputTituloDoTrabalho" class="col-sm-5 col-form-label">Titulo do Trabalho: </label>
-				    <?php echo $sql_array["TITULO_TRABALHO"] ?>
+				    <label for="inputTituloDoTrabalho" class="col-sm-5 col-form-label">Título do Trabalho: </label>
+				    <?php echo utf8_encode($sql_array["TITULO_TRABALHO"]) ?>
 				</div>
 
 				<div class="form-group col-md-10">
-				    <label for="inputTituloDoTrabalhoCadastradoProp" class="col-sm-5 col-form-label">Titulo do Projeto cadastrado na PROP: </label>
-				    <?php echo $sql_array["TITULO_PROJETO"] ?>
+				    <label for="inputTituloDoTrabalhoCadastradoProp" class="col-sm-5 col-form-label">Título do Projeto cadastrado na PROP: </label>
+				    <?php echo utf8_encode($sql_array["TITULO_PROJETO"]) ?>
 				</div>
 			</fieldset>
 
@@ -138,13 +138,13 @@
 			<h3>Outras Informações</h3>
 			<fieldset id="dados_solicitacao" class="border bg-light rounded">		
 				<div class="form-group col-md-10">
-					<label for="inputAuxilioSolicitado" class="col-sm-5 col-form-label">Auxilio Solicitado: </label>
-					<?php echo $sql_array["TIPO_AUXILIO"] ?>
+					<label for="inputAuxilioSolicitado" class="col-sm-5 col-form-label">Auxílio Solicitado: </label>
+					<?php echo utf8_encode($sql_array["TIPO_AUXILIO"]) ?>
 		  		</div>
 	  			
 	  			<div class="form-group col-md-10">
 				  <label for="exampleFormControlTextarea1" class="col-sm-5 col-form-label">Descrição/Justificativa: </label>
-				  <?php echo $sql_array["DESCRICAO"] ?>
+				  <?php echo utf8_encode($sql_array["DESCRICAO"]) ?>
 				</div>
 			</fieldset>
 

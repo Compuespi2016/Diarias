@@ -25,7 +25,7 @@
   <input type="text" name="nCentro"><br>
   Campus:<br>
   <input type="text" name="nCampus"><br>
-  Matricula:<br>
+  Matrícula:<br>
   <input type="text" name="nMatricula"><br>
   Senha:<br>
   <input type="password" name="nSenha"><br>

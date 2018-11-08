@@ -8,7 +8,7 @@
 	<?php
 		include_once "cabecalho.php";
 	?>
-
+	
 	<script src="js/moment.min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
@@ -24,6 +24,15 @@
 
 			}
 		}
+
+		function SomenteNumero(e){
+			var tecla=(window.event)?event.keyCode:e.which;   
+    	if((tecla>47 && tecla<58)) return true;
+    	else{
+    		if (tecla==8 || tecla==0) return true;
+			else  return false;
+    	}
+		}
 	</script>
 
 </head>
@@ -32,20 +41,12 @@
 	<h1 id="titulo_principal">Solicitação</h1>
 	<br>
 
-	<?php
-		if($_SESSION['nQTD'] >= 1){
-			$local = "tabela_pontuacao.php";
-		}else {
-			$local = "salva_solicitacao.php";
-		}
-	?>
-
-	<form method="post" action= <?php echo $local; ?>>
+	<form method="post" action="salva_solicitacao.php" >
 		<h3 id="subtitulo_principal">Dados Pessoais</h3>
 		<fieldset id="dados_solicitacao" class="border bg-light rounded">
 			<div class="form-group col-md-10">
 				<label class="col-sm-5 col-form-label">Nome:</label>
-	  			<?php echo $_SESSION['nNome']; ?>
+	  			<?php echo utf8_encode($_SESSION['nNome']); ?>
 	  		</div>
   			
   			<div class="form-group col-md-10">
@@ -65,7 +66,7 @@
 
   			<div class="form-group col-md-10">
   				<label class="col-sm-5 col-form-label">Campus: </label>
-  				<?php echo $_SESSION['nCampus']; ?>
+  				<?php echo utf8_encode($_SESSION['nCampus']); ?>
 			</div>
   		
   			<div class="form-group col-md-10">
@@ -80,7 +81,7 @@
 	  					echo "Docente";
 	  				}
 	  				if ($_SESSION['nTipo'] == 'T'){
-	  					echo "Tecnico";
+	  					echo "Técnico";
 	  				}
 	  				if ($_SESSION['nTipo'] == 'E'){
 	  					echo "Estudante";
@@ -101,19 +102,19 @@
 		      		$sql_bancos = mysqli_query($conexao,"SELECT * FROM BANCO");
 		      		while($aux = mysqli_fetch_assoc($sql_bancos)){
 		      	?>
-		        		<option><?php echo $aux["COD_BANCO"]." - ".$aux["NOME_BANCO"]; ?></option>
+		        		<option><?php echo utf8_encode($aux["COD_BANCO"]." - ".$aux["NOME_BANCO"]); ?></option>
 		    	<?php } ?>
 		      </select>
 		    </div>
 			
 			<div class="form-group row col-md-12">
 			    <label for="inputCodigoAgencia" class="col-sm-5 col-form-label">Código da Agência: </label>
-			    <input type="text" name="nCodigoDaAgencia" class="col-sm-7 form-control" id="inputCodigoAgencia" placeholder="Ex: 0001-3" required="">
+			    <input type="text" name="nCodigoDaAgencia" class="col-sm-7 form-control" id="inputCodigoAgencia" placeholder="Ex: 0001-3" onkeypress="return SomenteNumero(event)" required="">
 			</div>
 			
 			<div class="form-group row col-md-12">
 			    <label for="inputNumConta" class="col-sm-5 col-form-label">Número da Conta: </label>
-			    <input type="text" name="nNumConta" class="col-sm-7 form-control" id="inputNumConta" placeholder="Ex: 0000012" required="">
+			    <input type="text" name="nNumConta" class="col-sm-7 form-control" id="inputNumConta" placeholder="Ex: 0000012" onkeypress="return SomenteNumero(event)" required="">
 			</div>
 		</fieldset>
 
@@ -161,12 +162,12 @@
 		<h3>Dados do Trabalho</h3>
 		<fieldset id="dados_solicitacao" class="border bg-light rounded">
 			<div class="form-group row col-md-12">
-			    <label for="inputTituloDoTrabalho" class="col-sm-5 col-form-label">Titulo do Trabalho: </label>
+			    <label for="inputTituloDoTrabalho" class="col-sm-5 col-form-label">Título do Trabalho: </label>
 			    <input type="text" name="TituloDoTrabalho" class="col-sm-7 form-control" id="inputTituloDoTrabalho" required="">
 			</div>
 
 			<div class="form-group row col-md-12">
-			    <label for="inputTituloDoTrabalhoCadastradoProp" class="col-sm-5 col-form-label">Titulo do Projeto cadastrado na PROP: </label>
+			    <label for="inputTituloDoTrabalhoCadastradoProp" class="col-sm-5 col-form-label">Título do Projeto cadastrado na PROP: </label>
 			    <input type="text" name="TituloDoProjetoCadastradoNaProp" class="col-sm-7 form-control" id="inputTituloDoTrabalhoCadastradoProp" required="">
 			</div>
 		</fieldset>
@@ -175,7 +176,7 @@
 		<h3>Outras Informações</h3>
 		<fieldset id="dados_solicitacao" class="border bg-light rounded">		
 			<div class="form-group row col-md-10">
-				<label for="inputAuxilioSolicitado" class="col-sm-4 col-form-label">Auxilio Solicitado: </label>
+				<label for="inputAuxilioSolicitado" class="col-sm-4 col-form-label">Auxílio Solicitado: </label>
 
 				<?php
 					if($_SESSION['nTipo'] == "D" || $_SESSION['nTipo'] == "T"){
@@ -187,7 +188,7 @@
 				</div>
 				<div class="form-check form-check-inline">
 				  <input class="form-check-input" type="radio" name="AuxilioSolicitado" id="inputAuxilioSolicitado" value="Diaria" required="">
-				  <label class="form-check-label" for="inputAuxilioSolicitado">Diaria</label>
+				  <label class="form-check-label" for="inputAuxilioSolicitado">Diária</label>
 				</div>
 
 	  			<?php
@@ -205,7 +206,7 @@
 	  		</div>
   			
   			<div class="form-group col-md-12">
-			  <label for="exampleFormControlTextarea1">Descrição/Justificativa do Auxilio:</label>
+			  <label for="exampleFormControlTextarea1">Descrição/Justificativa do Auxílio:</label>
 			  <textarea class="form-control" name="nDesc" id="exampleFormControlTextarea1" rows="5"></textarea>
 			</div>
 		

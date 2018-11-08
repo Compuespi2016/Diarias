@@ -28,16 +28,16 @@
 			<h4><?php echo "Solicitação #".$aux["COD_SOLICITACAO"];?></h4>
 			<div class="row">
 			    <div class="col-md-6">
-			    	<?php echo "Evento: ".$aux["NOME_EVENTO"];?>
+			    	<?php echo utf8_encode("Evento: ".$aux["NOME_EVENTO"]);?>
 			    </div>
 			    <div class="col-md-6">
-			    	<?php echo "Titulo do Trabalho: ".$aux["TITULO_TRABALHO"];?>
+			    	<?php echo utf8_encode("Titulo do Trabalho: ".$aux["TITULO_TRABALHO"]);?>
 			    </div>
 			    <div class="col-md-6">
-			    	<?php echo "Titulo do Projeto: ".$aux["TITULO_PROJETO"];?>
+			    	<?php echo utf8_encode("Titulo do Projeto: ".$aux["TITULO_PROJETO"]);?>
 			    </div>
 			    <div class="col-md-6">
-			    	<?php echo "Local: ".$aux["LOCAL_EVENTO"];?>
+			    	<?php echo utf8_encode("Local: ".$aux["LOCAL_EVENTO"]);?>
 			   	</div>
 			    <div class="col-md-6">
 			    	<?php echo "Inicio dia: ".date('d/m/Y', strtotime($aux["INICIO_EVENTO"]));;?>
@@ -48,12 +48,12 @@
 
 			    <div class="col-md-6">
 			    	<?php if ($aux["VALIDACAO"] == "Confirmado") { ?>
-			    		<b><p class="text-success"><?php echo "Status: ".$aux["VALIDACAO"];?></p></b>
+			    		<b><p class="text-success"><?php echo utf8_encode("Status: ".$aux["VALIDACAO"]);?></p></b>
 			    	<?php }elseif ($aux["VALIDACAO"] == "Negado - PROP" || $aux["VALIDACAO"] == "Negado - PRAD" || $aux["VALIDACAO"] == "Negado - PROPLAN") { ?>
-			    		<b><p class="text-danger"><?php echo "Status: ".$aux["VALIDACAO"];?></p></b>
-			    		<?php echo "Justificativa: ".$aux["JUSTIFICATIVA"];?>
+			    		<b><p class="text-danger"><?php echo utf8_encode("Status: ".$aux["VALIDACAO"]);?></p></b>
+			    		<?php echo utf8_encode("Justificativa: ".$aux["JUSTIFICATIVA"]);?>
 			    	<?php }else { ?>
-			    		<b><p class="text-warning"><?php echo "Status: ".$aux["VALIDACAO"];?></p></b>
+			    		<b><p class="text-warning"><?php echo utf8_encode("Status: ".$aux["VALIDACAO"]);?></p></b>
 			    	<?php } ?>
 			    </div>
 		  	</div>
