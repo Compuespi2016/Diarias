@@ -86,7 +86,7 @@
 						<input class="form-control" type="text" id="valor" value="30" size = "1"  disabled="disabled"/>
 					</div>
 					<div class="col-md-2">
-						<input class="form-control" type="text" name="DOUTORADO" size="2" id="inputDoutorado" onblur="calcula('valor','inputDoutorado','total')" onkeypress="return SomenteNumero(event)" required="">
+						<input class="form-control" type="text" name="q_1" size="2" id="inputDoutorado" onblur="calcula('valor','inputDoutorado','total')" onkeypress="return SomenteNumero(event)" required="">
 					</div>
 					<div class="col-md-2">
 						<input class="form-control" type="text" id="total" size = "2" disabled="disabled" name="total"/>
@@ -106,7 +106,7 @@
 						<input class="form-control" type="text" id="valor2" value="15" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-md-2">
-						<input class="form-control" type="text" name="Mestrado" size = "2" id="inputMestrado" onkeypress="return SomenteNumero(event)" onblur="calcula('valor2','inputMestrado','total2')" required="">
+						<input class="form-control" type="text" name="q_2" size = "2" id="inputMestrado" onkeypress="return SomenteNumero(event)" onblur="calcula('valor2','inputMestrado','total2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total2" size = "2" disabled="disabled" name="total"/>
@@ -126,7 +126,7 @@
 						<input class="form-control" type="text" id="valor3" value="10" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputBPPC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor3','inputBPPC','total3')" required="">
+						<input class="form-control" type="text" name="q_3" id="inputBPPC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor3','inputBPPC','total3')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total3" size = "2" disabled="disabled" name="total"/>
@@ -155,7 +155,7 @@
 						<input class="form-control" type="text" id="valor4.1" value="10" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQA1" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.1','inputQA1','total4.1')" required=""  >
+						<input class="form-control" type="text" name="q_4_1" id="inputQA1" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.1','inputQA1','total4.1')" required=""  >
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total4.1" size = "2" disabled="disabled" name="total"/>
@@ -173,7 +173,7 @@
 						<input class="form-control" type="text" id="valor4.2" value="8" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQA2" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.2','inputQA2','total4.2')" required="">
+						<input class="form-control" type="text" name="q_4_2" id="inputQA2" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.2','inputQA2','total4.2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total4.2" size = "2" disabled="disabled" name="total"/>
@@ -191,7 +191,7 @@
 						<input class="form-control" type="text" id="valor4.3" value="6" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQB1" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.3','inputQB1','total4.3')" required="">
+						<input class="form-control" type="text" name="q_4_3" id="inputQB1" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.3','inputQB1','total4.3')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total4.3" size = "2" disabled="disabled" name="total"/>
@@ -209,7 +209,7 @@
 						<input class="form-control" type="text" id="valor4.4" value="4" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQB2" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.4','inputQB2','total4.4')" required="">
+						<input class="form-control" type="text" name="q_4_4" id="inputQB2" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.4','inputQB2','total4.4')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total4.4" size = "2" disabled="disabled" name="total"/>
@@ -227,7 +227,7 @@
 						<input class="form-control" type="text" id="valor4.5" value="3" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQB3" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.5','inputQB3','total4.5')" required="">
+						<input class="form-control" type="text" name="q_4_5" id="inputQB3" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.5','inputQB3','total4.5')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total4.5" size = "2" disabled="disabled" name="total"/>
@@ -245,7 +245,7 @@
 						<input class="form-control" type="text" id="valor4.6" value="2" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQB45" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.6','inputQB45','total4.6')" required="">
+						<input class="form-control" type="text" name="q_4_6" id="inputQB45" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.6','inputQB45','total4.6')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total4.6" size = "2" disabled="disabled" name="total"/>
@@ -264,7 +264,7 @@
 						<input class="form-control" type="text" id="valor4.7" value="1" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.7','inputQC','total4.7')" required="">
+						<input class="form-control" type="text" name="q_4_7" id="inputQC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor4.7','inputQC','total4.7')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total4.7" size = "2" disabled="disabled" name="total"/>
@@ -284,7 +284,7 @@
 						<input class="form-control" type="text" id="valor5" value="0.5" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputAPPCNCPS" onkeypress="return SomenteNumero(event)" onblur="calcula('valor5','inputAPPCNCPS','total5')" required="">
+						<input class="form-control" type="text" name="q_5" id="inputAPPCNCPS" onkeypress="return SomenteNumero(event)" onblur="calcula('valor5','inputAPPCNCPS','total5')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total5" size = "2" disabled="disabled" name="total"/>
@@ -313,7 +313,7 @@
 						<input class="form-control" type="text" id="valor6.1" value="2" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputEI" onkeypress="return SomenteNumero(event)" onblur="calcula('valor6.1','inputEI','total6.1')" required="">
+						<input class="form-control" type="text" name="q_6_1" id="inputEI" onkeypress="return SomenteNumero(event)" onblur="calcula('valor6.1','inputEI','total6.1')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total6.1" size = "2" disabled="disabled" name="total"/>
@@ -331,7 +331,7 @@
 						<input class="form-control" type="text" id="valor6.2" value="1" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputENR" onkeypress="return SomenteNumero(event)" onblur="calcula('valor6.2','inputENR','total6.2')" required="">
+						<input class="form-control" type="text" name="q_6_2" id="inputENR" onkeypress="return SomenteNumero(event)" onblur="calcula('valor6.2','inputENR','total6.2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total6.2" size = "2" disabled="disabled" name="total"/>
@@ -350,7 +350,7 @@
 						<input class="form-control" type="text" id="valor7" value="10" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputPR" onkeypress="return SomenteNumero(event)" onblur="calcula('valor7','inputPR','total7')" required="">
+						<input class="form-control" type="text" name="q_7" id="inputPR" onkeypress="return SomenteNumero(event)" onblur="calcula('valor7','inputPR','total7')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total7" size = "2" disabled="disabled" name="total"/>
@@ -370,7 +370,7 @@
 						<input class="form-control" type="text" id="valor8" value="10" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputSR" onkeypress="return SomenteNumero(event)" onblur="calcula('valor8','inputSR','total8')" required="">
+						<input class="form-control" type="text" name="q_8" id="inputSR" onkeypress="return SomenteNumero(event)" onblur="calcula('valor8','inputSR','total8')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total8" size = "2" disabled="disabled" name="total"/>
@@ -398,7 +398,7 @@
 						<input class="form-control" type="text" id="valor9.1" value="10" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputLPECE" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.1','inputLPECE','total9.1')" required="">
+						<input class="form-control" type="text" name="q_9_1" id="inputLPECE" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.1','inputLPECE','total9.1')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total9.1" size = "2" disabled="disabled" name="total"/>
@@ -416,7 +416,7 @@
 						<input class="form-control" type="text" id="valor9.2" value="5" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputLPSCE" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.2','inputLPSCE','total9.2')" required="">
+						<input class="form-control" type="text" name="q_9_2" id="inputLPSCE" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.2','inputLPSCE','total9.2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total9.2" size = "2" disabled="disabled" name="total"/>
@@ -434,7 +434,7 @@
 						<input class="form-control" type="text" id="valor9.3" value="5" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputLO" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.3','inputLO','total9.3')" required="">
+						<input class="form-control" type="text" name="q_9_3" id="inputLO" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.3','inputLO','total9.3')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total9.3" size = "2" disabled="disabled" name="total"/>
@@ -452,7 +452,7 @@
 						<input class="form-control" type="text" id="valor9.4" value="3" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCLPECE" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.4','inputCLPECE','total9.4')" required="">
+						<input class="form-control" type="text" name="q_9_4" id="inputCLPECE" onkeypress="return SomenteNumero(event)" onblur="calcula('valor9.4','inputCLPECE','total9.4')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total9.4" size = "2" disabled="disabled" name="total"/>
@@ -480,7 +480,7 @@
 						<input class="form-control" type="text" id="valor10.1" value="10" size = "1"  disabled="disabled"  />
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputPPFECCO" onkeypress="return SomenteNumero(event)" onblur="calcula('valor10.1','inputPPFECCO','total10.1')" required="">
+						<input class="form-control" type="text" name="q_10_1" id="inputPPFECCO" onkeypress="return SomenteNumero(event)" onblur="calcula('valor10.1','inputPPFECCO','total10.1')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total10.1" size = "2" disabled="disabled" name="total10.1"/>
@@ -499,7 +499,7 @@
 						<input class="form-control" type="text" name="" id="valor10.2" value="5" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputPPFECC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor10.2','inputPPFECC','total10.2')" required="">
+						<input class="form-control" type="text" name="q_10_2" id="inputPPFECC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor10.2','inputPPFECC','total10.2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" id="total10.2" disabled="disabled" required="" readonly>
@@ -527,7 +527,7 @@
 						<input class="form-control" type="text" name="" id="valor11.1" value="5" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputPPFICCO" onkeypress="return SomenteNumero(event)" onblur="calcula('valor11.1','inputPPFICCO','total11.1')" required="">
+						<input class="form-control" type="text" name="q_11_1" id="inputPPFICCO" onkeypress="return SomenteNumero(event)" onblur="calcula('valor11.1','inputPPFICCO','total11.1')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total11.1" disabled="disabled" required="" readonly>	
@@ -545,7 +545,7 @@
 						<input class="form-control" type="text" name="" id="valor11.2" value="3" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputPPFICC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor11.2','inputPPFICC','total11.2')" required="">
+						<input class="form-control" type="text" name="q_11_2" id="inputPPFICC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor11.2','inputPPFICC','total11.2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total11.2" disabled="disabled" required="" readonly>
@@ -573,7 +573,7 @@
 						<input class="form-control" type="text" name="" id="valor12.1" value="10" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCCOD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.1','inputCCOD','total12.1')" required="">
+						<input class="form-control" type="text" name="q_12_1" id="inputCCOD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.1','inputCCOD','total12.1')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total12.1" disabled="disabled" required="" readonly>
@@ -591,7 +591,7 @@
 						<input class="form-control" type="text" name="" id="valor12.2" value="8" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCCOM" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.2','inputCCOM','total12.2')" required="">
+						<input class="form-control" type="text" name="q_12_2" id="inputCCOM" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.2','inputCCOM','total12.2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total12.2" disabled="disabled" required="" readonly>
@@ -610,7 +610,7 @@
 						<input class="form-control" type="text" name="" id="valor12.3" value="4" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCCOIC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.3','inputCCOIC','total12.3')" required="">
+						<input class="form-control" type="text" name="q_12_3" id="inputCCOIC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.3','inputCCOIC','total12.3')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total12.3" disabled="disabled" required="" readonly>
@@ -628,7 +628,7 @@
 						<input class="form-control" type="text" name="" id="valor12.4" value="2" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCCOTG" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.4','inputCCOTG','total12.4')" required="">
+						<input class="form-control" type="text" name="q_12_4" id="inputCCOTG" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.4','inputCCOTG','total12.4')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total12.4" disabled="disabled" required="" readonly>
@@ -646,7 +646,7 @@
 						<input class="form-control" type="text" name="" id="valor12.5" value="0.5" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCCOICJ" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.5','inputCCOICJ','total12.5')" required="">
+						<input class="form-control" type="text" name="q_12_5" id="inputCCOICJ" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.5','inputCCOICJ','total12.5')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total12.5" disabled="disabled" required="" readonly>
@@ -664,7 +664,7 @@
 						<input class="form-control" type="text" name="" id="valor12.6" value="2" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCCOME" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.6','inputCCOME','total12.6')" required="">
+						<input class="form-control" type="text" name="q_12_6" id="inputCCOME" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.6','inputCCOME','total12.6')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total12.6" disabled="disabled" required="" readonly>
@@ -683,7 +683,7 @@
 						
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputCCCD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.7','inputCCCD','total12.7')" required="">
+						<input class="form-control" type="text" name="q_12_7" id="inputCCCD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor12.7','inputCCCD','total12.7')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total12.7" disabled="disabled" required="" readonly>
@@ -712,7 +712,7 @@
 						
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.1','inputD','total13.1')" required="">
+						<input class="form-control" type="text" name="q_13_1" id="inputD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.1','inputD','total13.1')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total13.1" disabled="disabled" required="" readonly>
@@ -731,7 +731,7 @@
 						
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.2','inputQD','total13.2')" required="">
+						<input class="form-control" type="text" name="q_13_2" id="inputQD" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.2','inputQD','total13.2')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total13.2" disabled="disabled" required="" readonly>
@@ -750,7 +750,7 @@
 						<input class="form-control" type="text" name="" id="valor13.3" value="4" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputM" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.3','inputM','total13.3')" required="">
+						<input class="form-control" type="text" name="q_13_3" id="inputM" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.3','inputM','total13.3')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total13.3" disabled="disabled" required="" readonly>
@@ -769,7 +769,7 @@
 						<input class="form-control" type="text" name="" id="valor13.4" value="2" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputQM" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.4','inputQM','total13.4')" required="">
+						<input class="form-control" type="text" name="q_13_4" id="inputQM" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.4','inputQM','total13.4')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total13.4" disabled="disabled" required="" readonly>
@@ -787,7 +787,7 @@
 						<input class="form-control" type="text" name="" id="valor13.5" value="1" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputTC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.5','inputTC','total13.5')" required="">
+						<input class="form-control" type="text" name="q_13_5" id="inputTC" onkeypress="return SomenteNumero(event)" onblur="calcula('valor13.5','inputTC','total13.5')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="DOUTORADO" id="total13.5" disabled="disabled" required="" readonly>	
@@ -807,7 +807,7 @@
 						<input class="form-control" type="text" name="" id="valor14" value="6" disabled="disabled" readonly>
 					</div>
 					<div class="col-2">
-						<input class="form-control" type="text" name="DOUTORADO" id="inputMCEP" onkeypress="return SomenteNumero(event)" onblur="calcula('valor14','inputMCEP','total14')" required="">
+						<input class="form-control" type="text" name="q_14" id="inputMCEP" onkeypress="return SomenteNumero(event)" onblur="calcula('valor14','inputMCEP','total14')" required="">
 					</div>
 					<div class="col-2">
 						<input class="form-control" type="text" name="" id="total14" disabled="disabled" readonly>
@@ -829,7 +829,7 @@
 		</fieldset>
 		<br>
 
-		<input class="btn btn-primary" type="submit" value="Enviar Solicitação">
+		<input class="btn btn-primary" type="submit" value="Enviar">
 
 		<br>
 		<br>
