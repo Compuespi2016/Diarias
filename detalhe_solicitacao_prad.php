@@ -106,12 +106,12 @@
 
 	  			<div class="form-group col-md-10">
 				    <label for="inputDataInicioEvento" class="col-sm-5 col-form-label">Data de Início: </label>
-				    <?php echo $sql_array["INICIO_EVENTO"] ?>
+				    <?php echo date('d/m/Y', strtotime($sql_array["INICIO_EVENTO"])); ?>
 				</div>
 
 	  			<div class="form-group col-md-10">
 				    <label for="inputDataFimEvento" class="col-sm-5 col-form-label">Data de Fim: </label>
-				    <?php echo $sql_array["FIM_EVENTO"] ?>
+				    <?php echo date('d/m/Y', strtotime($sql_array["FIM_EVENTO"])); ?>
 				</div>	
 				
 				<div class="form-group col-md-10">
