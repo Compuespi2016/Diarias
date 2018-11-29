@@ -64,5 +64,28 @@
 	  </div>
 	</div>
 
+	<br>
+
+	<div class="row d-flex justify-content-center">
+	  <div class="col-sm-3" onclick="location.href='login_auditoria.php'">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">Auditoria Interna</h5>
+	        <p class="card-text"></p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-3" onclick="location.href='sobre.php'">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">Sobre o Programa</h5>
+	        <p class="card-text"></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+
 </body>
 </html>
