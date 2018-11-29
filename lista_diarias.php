@@ -56,6 +56,13 @@
 			    		<b><p class="text-warning"><?php echo utf8_encode("Status: ".$aux["VALIDACAO"]);?></p></b>
 			    	<?php } ?>
 			    </div>
+			    <div class="col-md-8">
+			    <a role="button" class="btn btn-primary" href="tela_prestar_conta.php?id=<?php echo $aux['COD_SOLICITACAO'] ?>">Prestar Contas</a>
+			    </div>
+			    <div>
+			    <a role="button" class="btn btn-primary" href="cancela_solicitacao.php?id=<?php echo $aux['COD_SOLICITACAO'] ?>">Remover Solicitação</a>
+			    </div>
+			    
 		  	</div>
 		  </li>
 
@@ -65,6 +72,8 @@
 			}
 		?>
 	</div>
+	<br>
+	<br>
 	</center>
 
 </body>

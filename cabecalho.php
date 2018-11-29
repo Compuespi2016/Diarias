@@ -47,7 +47,6 @@
 					<a class="nav-link" href="Index.php"><b>Início</b></a>
 					<a class="nav-link" href="Solicitar_Diaria.php"><b>Solicitar Diária</b></a>
 					<a class="nav-link" href="lista_diarias.php"><b>Minhas Diárias</b></a>
-					<a class="nav-link" href="tela_prestar_conta.php"><b>Prestar Contas</b></a>
 					<a class="nav-link" href="sair.php"><b>Sair</b></a>
 				  </nav>
 				</nav>
