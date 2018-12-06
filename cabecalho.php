@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
 	<title>Index</title>
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
@@ -29,7 +28,7 @@
 				<nav class="navbar navbar-light bg-light shadow-sm p-3 mb-5 bg-light rounded">
 				  <a class="navbar-brand"><img src="_imagens/logo-1.png"/></a>
 				  <nav class="nav">
-					<a class="nav-link" href="tela_inicial.php"><b>Voltar à Tela Inicial</b></a>
+					<a class="nav-link" href="tela_inicial.php"><b>Voltar a Tela Inicial</b></a>
 				  </nav>
 				</nav>
 			</center>
@@ -39,13 +38,21 @@
 		else{
 	?>
 
+	<?php
+		if($_SESSION['nQTD'] >= 1 && $_SESSION['nTipo'] == 'D'){
+			$local = "tabela_pontuacao.php";
+		}else {
+			$local = "Solicitar_Diaria.php";
+		}
+	?>
+
 		<header id="cabecalho">
 			<center>
 				<nav class="navbar navbar-light bg-light shadow-sm p-3 mb-5 bg-light rounded">
 				  <a class="navbar-brand"><img src="_imagens/logo-1.png"/></a>
 				  <nav class="nav">
-					<a class="nav-link" href="Index.php"><b>Início</b></a>
-					<a class="nav-link" href="Solicitar_Diaria.php"><b>Solicitar Diária</b></a>
+					<a class="nav-link" href="Index.php"><b>Inicio</b></a>
+					<a class="nav-link" href=<?php echo $local; ?>><b>Solicitar Diária</b></a>
 					<a class="nav-link" href="lista_diarias.php"><b>Minhas Diárias</b></a>
 					<a class="nav-link" href="sair.php"><b>Sair</b></a>
 				  </nav>

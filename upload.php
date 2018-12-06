@@ -5,7 +5,7 @@
   $arq2 = $_FILES['Arq02'];
   $arq3 = $_FILES['Arq03'];
   $mat = $_SESSION['nMatricula'];
-  $cod_sol = $_GET["id"];
+  $cod_sol = $_GET['id'];
 
   $novo_nome1 = time()."1.pdf";
   $novo_nome2 = time()."2.pdf";
@@ -20,4 +20,8 @@
     
   mysqli_query($conexao,$queryInsercao) or die("Algo deu errado ao inserir o registro. Tente novamente.");
 
-  echo 'Registro inserido com sucesso!';
+  ?>
+  <script style="" type="text/javascript"> alert('Arquivos inseridos com sucesso!!!');</script>
+  <?php
+  header('Location: lista_diarias.php');
+  ?>

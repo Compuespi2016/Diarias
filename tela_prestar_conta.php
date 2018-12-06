@@ -11,7 +11,7 @@
 		$cod_sol = $_GET["id"];
 	?>
 
-	<form enctype="multipart/form-data" action="upload.php?id=<?php echo $aux['$cod_sol'] ?>" method="post">
+	<form enctype="multipart/form-data" action="upload.php?id=<?php echo $cod_sol ?>" method="post">
 		
 		<h3> Solicitação nº: <?php echo $cod_sol ?> </h3>
 		

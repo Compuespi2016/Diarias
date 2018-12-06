@@ -20,11 +20,18 @@
 	$AUXILIO = $_POST['AuxilioSolicitado'];
 	$DESC = $_POST['nDesc'];
 
-	$ws = mysqli_query($conexao,"SELECT LAST_INSERT_ID(cod_pontuacao) FROM PONTUACAO");
+	$COD_PONTUACAO = 0;	
 
-	while($aux = mysqli_fetch_assoc($ws)){
-		$COD_PONTUACAO = $aux["LAST_INSERT_ID(cod_pontuacao)"];
-	}
+	$CADASTRADOS = mysqli_fetch_array(mysqli_query($conexao, "SELECT * FROM CADASTRADOS WHERE MATRICULA = $MATRICULA"));
+
+	if($CADASTRADOS["TIPO"] == 'D'){
+
+		$ws = mysqli_query($conexao,"SELECT LAST_INSERT_ID(cod_pontuacao) FROM PONTUACAO");
+
+		while($aux = mysqli_fetch_assoc($ws)){
+			$COD_PONTUACAO = $aux["LAST_INSERT_ID(cod_pontuacao)"];
+		}
+	}	
 
 	if($sql = mysqli_query($conexao, "INSERT INTO SOLICITACAO (MAT_SOLICITANTE, COD_NOME_BANCO, COD_AGENCIA, NUM_CONTA, NOME_EVENTO, LOCAL_EVENTO, INICIO_EVENTO, FIM_EVENTO, ABRANGENCIA, TITULO_TRABALHO, TITULO_PROJETO, TIPO_AUXILIO, DESCRICAO, COD_PONTUACAO ) VALUES ('$MATRICULA','$COD_BANCO','$COD_AGENCIA','$NUM_CONTA','$NOME_EVENTO','$LOCAL_EVENTO','$INICIO_EVENTO','$FIM_EVENTO','$ABRANGENCIA_EVENTO','$TITULO_TRABALHO','$TITULO_PROJETO','$AUXILIO','$DESC', '$COD_PONTUACAO')")){
 		header("Location: Index.php?deu_certo=true");

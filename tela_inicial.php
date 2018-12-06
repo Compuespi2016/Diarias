@@ -71,21 +71,21 @@
 	    <div class="card">
 	      <div class="card-body">
 	        <h5 class="card-title">Auditoria Interna</h5>
-	        <p class="card-text"></p>
+	        <p class="card-text">Controle dos Pagamantos pela UESPI</p>
 	      </div>
 	    </div>
 	  </div>
 	  <div class="col-sm-3" onclick="location.href='sobre.php'">
 	    <div class="card">
 	      <div class="card-body">
-	        <h5 class="card-title">Sobre o Programa</h5>
-	        <p class="card-text"></p>
+	        <h5 class="card-title">Sobre</h5>
+	        <p class="card-text">Mais Informações sobre o programa</p>
 	      </div>
 	    </div>
 	  </div>
 	</div>
 
-
+	<br>
 
 </body>
 </html>
